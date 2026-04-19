@@ -1,0 +1,60 @@
+{
+  "expo": {
+    "name": "FitCount",
+    "slug": "fitcount",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icons/barbell.png",
+    "scheme": "fitcount-app",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "package": "com.abdullateef.fitcount",
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/icons/barbell.png",
+        "backgroundImage": "./assets/icons/barbell.png",
+        "monochromeImage": "./assets/icons/barbell.png"
+      },
+      "googleServicesFile": "./google-services.json",
+      "edgeToEdgeEnabled": true,
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "output": "static",
+      "favicon": "./assets/icons/barbell.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/icons/running.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#7e0063",
+          "dark": {
+            "backgroundColor": "#000000"
+          }
+        }
+      ],
+      "@react-native-firebase/app",
+      "@react-native-firebase/auth",
+      "@react-native-firebase/crashlytics",
+      "@react-native-google-signin/google-signin"
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "ba17b5f5-22cf-4cbb-8466-03e7a8ee42ee"
+      }
+    }
+  }
+}
