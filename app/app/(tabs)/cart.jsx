@@ -41,7 +41,6 @@ const PRODUCTS = [
 const CartScreen = () => {
   const [cartItems, setCartItems] = useState([]);
 
-  // Logic to add item to cart
   const addToCart = (product) => {
     setCartItems(prev => {
       const existing = prev.find(item => item.id === product.id);
@@ -80,7 +79,6 @@ const CartScreen = () => {
       </View>
 
       <ScrollView showsVerticalScrollIndicator={false}>
-        {/* --- SECTION 1: BROWSE PRODUCTS --- */}
         <Text style={styles.sectionTitle}>Available Gear</Text>
         <FlatList
           data={PRODUCTS}
@@ -100,7 +98,6 @@ const CartScreen = () => {
           )}
         />
 
-        {/* --- SECTION 2: YOUR CART SELECTION --- */}
         <Text style={[styles.sectionTitle, { marginTop: 30 }]}>Your Selection</Text>
         <View style={styles.cartList}>
           {cartItems.length === 0 ? (

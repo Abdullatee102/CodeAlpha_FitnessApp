@@ -26,13 +26,10 @@ export default function EditProfileScreen() {
     setLoading(true);
     try {
       if (auth.currentUser) {
-        // 1. Update Firebase Authentication
         await updateProfile(auth.currentUser, {
           displayName: fullName,
         });
 
-        // 2. Sync Zustand Store
-        // We pass the updated user object back to the store
         authStore.setUser({
           ...auth.currentUser,
           displayName: fullName,

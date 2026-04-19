@@ -61,7 +61,7 @@ const GuidelineDetail = () => {
 };
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: "#1A1A1A" }, // Matches Home Screen dark theme
+  container: { flex: 1, backgroundColor: "#1A1A1A" }, 
   heroImage: { width: width, height: height * 0.45 },
   imageOverlay: { 
     flex: 1, 

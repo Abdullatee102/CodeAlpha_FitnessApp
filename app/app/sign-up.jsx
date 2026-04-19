@@ -66,7 +66,7 @@ export default function SignUpScreen() {
 
   return (
     <SafeAreaView style={styles.container}>
-      {/* HEADER SECTION WITH WELCOME ICON */}
+      {/* HEADER SECTION */}
       <View style={styles.headerSection}>
         <View style={styles.welcomeCircle}>
           <MaterialCommunityIcons name="hand-wave" size={40} color="#7E0054" />

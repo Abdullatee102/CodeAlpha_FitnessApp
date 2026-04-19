@@ -67,7 +67,7 @@ export default function SignInScreen() {
       </View>
 
       <View style={styles.form}>
-        {/* EMAIL INPUT - MODERN BOX STYLE */}
+        {/* EMAIL INPUT */}
         <View style={styles.modernInput}>
           <Ionicons name="mail-outline" size={20} color="#7E0054" style={styles.icon} />
           <TextInput
@@ -81,7 +81,7 @@ export default function SignInScreen() {
           />
         </View>
 
-        {/* PASSWORD INPUT - MODERN BOX STYLE */}
+        {/* PASSWORD INPUT */}
         <View style={styles.modernInput}>
           <Ionicons name="lock-closed-outline" size={20} color="#7E0054" style={styles.icon} />
           <TextInput
@@ -123,7 +123,7 @@ export default function SignInScreen() {
         <Text style={styles.googleButtonText}>Continue with Google</Text>
       </TouchableOpacity>
 
-      {/* REFINED FOOTER - ONLY "CREATE ACCOUNT" IS PRESSABLE */}
+      {/* FOOTER  */}
       <View style={styles.footerLink}>
         <Text style={styles.footerText}>New to the platform? </Text>
         <TouchableOpacity onPress={() => router.push('/sign-up')}>

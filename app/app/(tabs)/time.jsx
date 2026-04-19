@@ -14,7 +14,6 @@ const ScheduleScreen = () => {
     updateCalories, setActiveTask, addWorkout
   } = useFitnessStore();
 
-  // 1. Timer ticking logic
   useEffect(() => {
     let interval = null;
     if (isTimerActive) {
@@ -25,13 +24,11 @@ const ScheduleScreen = () => {
     return () => clearInterval(interval);
   }, [isTimerActive]);
 
-  // 2. Dynamic Progress Calculation for the Circle
   const targetSeconds = activeTask ? activeTask.duration * 60 : 1;
   const progress = Math.min(currentWorkoutTimer / targetSeconds, 1);
   
   const rotateVal = `${progress * 360}deg`;
 
-  // 3. Auto-stop logic
   useEffect(() => {
     if (activeTask && isTimerActive && currentWorkoutTimer >= targetSeconds) {
       stopTimer();
@@ -72,11 +69,9 @@ const ScheduleScreen = () => {
         date: new Date().toLocaleDateString(),
       };
 
-      // 3. Update the Store
       updateCalories(workoutCalories);
       addWorkout(newLog);
       
-      // Link the steps/energy card
       const currentSteps = useFitnessStore.getState().steps;
       useFitnessStore.getState().setSteps(currentSteps + earnedSteps);
       
@@ -152,8 +147,6 @@ const styles = StyleSheet.create({
   container: { padding: 20 },
   glassCard: { backgroundColor: '#FFF', borderRadius: 35, padding: 25, alignItems: 'center', elevation: 5, marginBottom: 30 },
   activeTaskName: { fontFamily: 'RobotoCondensed-Bold', fontSize: 20, color: '#7E0054', marginBottom: 20 },
-  
-  // OUTER BACKGROUND CIRCLE
   timerCircle: { 
     width: 180, 
     height: 180, 
@@ -165,7 +158,6 @@ const styles = StyleSheet.create({
     marginBottom: 25,
     position: 'relative'
   },
-  // INNER ROTATING RING
   progressRing: {
     position: 'absolute',
     width: 180,
@@ -173,7 +165,7 @@ const styles = StyleSheet.create({
     borderRadius: 90,
     borderWidth: 8,
     borderColor: 'transparent',
-    borderTopColor: '#7E0054', // The moving part
+    borderTopColor: '#7E0054', 
   },
 
   timerDigits: { fontFamily: 'RobotoCondensed-Bold', fontSize: 42, color: '#333' },
