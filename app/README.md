@@ -28,7 +28,7 @@
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/Abdullatee102/fitcount.git](https://github.com/Abdullatee102/fitcount.git)
+    git clone https://github.com/Abdullatee102/fitcount.git
     cd app
     ```
 
